@@ -1,39 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-
 int main()
 {
-    int size, *arr, sum, errHandler; //Variables
-    size = 0;
-    sum = 0;
+    printf ("1st C Functions Activity\n");
+    printf ("Total and Average Grade of Student\n");
+
+    float Math,Science,Filipino,English,PE, Sum, Average;
+    printf ("Enter Math: ");
+    scanf("%f",&Math);
+    printf ("Enter Science: ");
+    scanf("%f",&Science);
+    printf ("Enter Filipino: ");
+    scanf("%f",&Filipino);
+    printf ("Enter English: ");
+    scanf("%f",&English);
+    printf ("Enter PE: ");
+    scanf("%f",&PE);
 
 
-    printf("  Size of Array:  "); //Input the Array Size
-    errHandler = scanf("%d",&size);
+    Sum = Math+Science+Filipino+English+PE;
+    printf("Total = %.2f\n", Sum );
 
-    if(!errHandler){ //Prints error if non-numerical characters are inputted.
-        printf("\n Invalid Input!  Enter number Only \n\n");
-        return 0;
-    }
-
-    if(size < 5 || size > 10)
-    {
-        printf("  Array Size Limit is 5 to 10 Only.  ");
-        return 0;   //Prints invalid if size limit is less than 5 and greater than 10.
-
-    }
-     arr = (int *) malloc(sizeof(int) * size);
+    Average = (Math+Science+Filipino+English+PE)/5;
+    printf("Average = %.2f\n", Average);
 
 
-     for(int i = 0; i < size; i++)
-     {
-          printf("  Element %d :  ",i+1);
-          scanf("%d", &arr[i]);
-
-          sum += arr[i]; //Adds the inputted elements.
-     }
-     printf("\n  Sum of all array elements : %d \n", sum);
-
-     return 0;
 }
