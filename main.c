@@ -1,33 +1,27 @@
 #include <stdio.h>
-#include <string.h>
-void main()
+int main()
 {
-   int CustomID, ConUnit;
-   float chg, surchg=0, gramt,netamt;
+    printf ("1st C Functions Activity\n");
+    printf ("Total and Average Grade of Student\n");
 
-   printf("Input Customer ID :");
-   scanf("%d",&CustomID);
-   printf("Input the unit consumed by the customer : ");
-   scanf("%d",&ConUnit);
-   if (ConUnit > 200)
-	chg = 1.50;
-	else if (ConUnit>=250 && ConUnit<400)
-		chg = 1.60;
-	else if (ConUnit>=450 && ConUnit<600)
-		chg = 1.85;
-   else (ConUnit>600);
-	chg = 2.00;
-   gramt = ConUnit*chg;
-   if (gramt>400)
-	surchg = gramt*10/100.0;
-   netamt = gramt+surchg;
-   if (netamt  < 100)
-	netamt =100;
-   printf("\n[Electricity Bill]\n");
-   printf("Customer ID#                       :%d\n",CustomID);
-   printf("unit Consumed                      :%d\n",ConUnit);
-   printf("Unit Charges @P%4.2f  per unit     :%8.2f\n",chg,gramt);
-   printf("Surchage Amount                    :%8.2f\n",surchg);
-   printf("Total Customer Bill                :%8.2f\n",netamt);
+    float Math,Science,Filipino,English,PE, Sum, Average;
+    printf ("Enter Math: ");
+    scanf("%f",&Math);
+    printf ("Enter Science: ");
+    scanf("%f",&Science);
+    printf ("Enter Filipino: ");
+    scanf("%f",&Filipino);
+    printf ("Enter English: ");
+    scanf("%f",&English);
+    printf ("Enter PE: ");
+    scanf("%f",&PE);
+
+
+    Sum = Math+Science+Filipino+English+PE;
+    printf("Total = %.2f\n", Sum );
+
+    Average = (Math+Science+Filipino+English+PE)/5;
+    printf("Average = %.2f\n", Average);
+
+
 }
-
